@@ -1,0 +1,540 @@
+/* Establece márgenes y rellenos predeterminados para todos los elementos,
+   garantizando una apariencia uniforme y consistente */
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define las fuentes para los títulos de secciones */
+.titulosecciones {
+  font-family: Cambria Rounded, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 70px;
+  /* Agrega un efecto de sombra al texto */
+  text-shadow: -8px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Establece el estilo general del cuerpo del sitio, incluyendo el fondo y la fuente predeterminada */
+body {
+  background-color: seashell;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+/* Ajusta las imágenes para que se ajusten al ancho de su contenedor */
+img {
+  max-width: 100%;
+}
+
+/* Establece el estilo para el encabezado, incluyendo color de fondo, color de texto y disposición de elementos */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Define estilos para los íconos de la cesta de compra */
+.container-icon {
+  position: sticky;
+  color: white;
+}
+
+/* Define el tamaño y color de los íconos de la cesta de compra, y añade un efecto de cambio al pasar el mouse sobre ellos */
+.icon-cart {
+  width: 40px;
+  height: 40px;
+  stroke: #000;
+}
+
+.icon-cart:hover {
+  cursor: pointer;
+}
+
+/* Establece estilos para la barra de navegación, incluyendo la lista de elementos de navegación y los enlaces */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Establece el estilo para el contenido principal de la página, incluyendo márgenes internos */
+main {
+  padding: 20px;
+}
+
+/* Define un contenedor para los elementos de la página, utilizando un diseño de cuadrícula para organizarlos en filas y columnas */
+.container-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Consulta de medios para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .container-items {
+    grid-template-columns: repeat(3, 1fr);
+    /* Cambia a 3 columnas en pantallas más pequeñas */
+  }
+}
+
+/* Consulta de medios para pantallas aún más pequeñas */
+@media screen and (max-width: 576px) {
+  .container-items {
+    grid-template-columns: repeat(2, 1fr);
+    /* Cambia a 2 columnas en pantallas aún más pequeñas */
+  }
+}
+
+/* Consulta de medios para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+  .container-items {
+    grid-template-columns: repeat(1, 1fr);
+    /* Cambia a 1 columna en pantallas muy pequeñas */
+  }
+}
+
+/* Define un borde redondeado para los elementos con la clase .item */
+.item {
+  border-radius: 10px;
+}
+
+/* Agrega una sombra al elemento cuando se pasa el ratón sobre él */
+.item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+}
+
+/* Establece el ancho y alto de las imágenes dentro de los elementos .item */
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain; /* Ajusta la imagen dentro de su contenedor sin distorsionarla */
+  border-radius: 10px 10px 0 0; /* Borde redondeado solo en la parte superior */
+  transition: all .5s; /* Agrega una transición suave cuando se produce un cambio en la imagen */
+}
+
+/* Establece el desbordamiento oculto para los elementos .item */
+.item {
+  overflow: hidden;
+}
+
+/* Cuando se pasa el ratón sobre el elemento .item, aumenta ligeramente la escala de la imagen */
+.item:hover a img {
+  transform: scale(1.1);
+}
+
+/* Define los estilos para la información del producto */
+.info-product {
+  line-height: 1; /* Ajusta la altura de línea para evitar un espacio extra entre líneas */
+  display: flex; /* Utiliza el modelo de caja flexible para organizar el contenido */
+  flex-direction: column; /* Organiza los elementos en columnas */
+  gap: 10px; /* Agrega un espacio entre los elementos hijos */
+}
+
+/* Define los estilos para el botón dentro de la información del producto */
+.info-product button {
+  border: none; /* Elimina el borde del botón */
+  background: none; /* Elimina el fondo del botón */
+  background-color: lightsalmon; /* Establece el color de fondo */
+  color: antiquewhite; /* Establece el color del texto */
+  padding: 15px; /* Agrega relleno al botón */
+  cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón */
+}
+
+/* Define los estilos para el precio del producto */
+.precio {
+  font-size: 18px; /* Establece el tamaño de fuente */
+  font-weight: 900; /* Establece el grosor de la fuente */
+}
+
+/* Define los estilos para la sección de opiniones de clientes */
+.customer-opinions {
+  background-color: #333; /* Establece el color de fondo */
+  color: #fff; /* Establece el color del texto */
+  padding: 20px; /* Agrega relleno */
+  text-align: center; /* Centra el texto */
+}
+
+/* Establece el tamaño máximo para el logo */
+.brand img {
+  max-width: 100px; /* Establece el ancho máximo */
+}
+
+/* Define los estilos para la sección de servicio de reparación de electrónicos */
+.repair-service {
+  display: flex; /* Utiliza el modelo de caja flexible para organizar el contenido */
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-top: 50px; /* Agrega espacio superior */
+  max-width: 100%; /* Establece el ancho máximo */
+  flex-direction: row; /* Organiza los elementos en una fila */
+}
+
+/* Define los estilos para la imagen dentro de la sección de reparación de electrónicos */
+.repair-image img {
+  max-width: 300px; /* Establece el ancho máximo */
+  height: auto; /* Ajusta automáticamente la altura */
+}
+
+/* Define los estilos para el texto dentro de la sección de reparación de electrónicos */
+.repair-text {
+  margin-left: 50px; /* Agrega espacio a la izquierda */
+}
+
+.repair-text h2 {
+  color: #333; /* Establece el color del título */
+}
+
+.repair-text p {
+  color: #666; /* Establece el color del texto */
+}
+
+/* Define un contenedor de juegos que utiliza un modelo de caja flexible para centrar los elementos y envolverlos en varias líneas */
+.juegos {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+}
+
+/* Define los estilos para los elementos de la lista de juegos */
+.lista-de-juegos {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 8px 40px 0 burlywood; /* Agrega una sombra alrededor del elemento */
+}
+
+/* Define los estilos para las imágenes dentro de la lista de juegos */
+.lista-de-juegos img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Cuando se pasa el ratón sobre el elemento de la lista de juegos, aumenta ligeramente su escala */
+.lista-de-juegos:hover {
+  transform: scale(1.2);
+}
+
+/* Define los estilos para el título dentro de la lista de juegos */
+.lista-de-juegos h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Define los estilos para los párrafos dentro de la lista de juegos */
+.lista-de-juegos p {
+  margin-top: 5px;
+}
+
+/* Estilos para el footer */
+
+/* Define un contenedor flexible para el pie de página */
+.footer-distributed {
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+/* Define los estilos para las secciones del pie de página */
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Estilos para la sección izquierda del pie de página */
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* Estilos para el logotipo de la empresa */
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Estilos para los enlaces del pie de página */
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Estilos para la sección central del pie de página */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Estilos para la sección derecha del pie de página */
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Estilos para el pie de página en dispositivos con un ancho máximo de 880px */
+@media (max-width: 880px) {
+
+  /* Ajusta el tamaño de la fuente del pie de página */
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  /* Ajusta el diseño de las secciones del pie de página */
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px; /* Añade espacio entre las secciones */
+    text-align: center; /* Centra el contenido */
+  }
+
+  /* Ajusta el margen izquierdo del icono en la sección central del pie de página */
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/* Estilos para los botones de compra y añadir al carrito */
+#btn-add-to-cart,
+#btn-compra {
+  padding: 15px 30px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  cursor: pointer;
+  color: greenyellow;
+  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+}
+
+/* Estilos al pasar el ratón sobre los botones */
+#btn-add-to-cart:hover,
+#btn-compra:hover {
+  animation: a 0.5s 1 linear; /* Agrega una animación al pasar el ratón */
+}
+
+/* Define la animación */
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* Estilos para el contenedor del carrito */
+#cart-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Estilos para la tarjeta de producto */
+.tarjeta-producto {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  gap: 20px; /* Añade espacio entre los elementos */
+}
+
+.tarjeta-producto img {
+  height: 100%; /* Establece la altura de la imagen al 100% */
+}
+
+.tarjeta-producto h3 {
+  width: 130px; /* Establece el ancho del título */
+}
+
+.tarjeta-producto div {
+  background-color: var(--color-acento-claro); /* Utiliza una variable CSS para el color de fondo */
+  padding: 3px;
+  border-radius: 5px;
+}
+
+/* Estilos para el total del carrito */
+#totales {
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilos para el mensaje de carrito vacío */
+#carrito-vacio {
+  text-align: center; /* Centra el texto */
+}
+
+/* Estilos para los detalles del producto */
+.product-details {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Estilos para la imagen del producto */
+.product-image {
+  flex: 0 0 auto; /* Establece el tamaño fijo de la imagen */
+  margin-right: 20px; /* Añade espacio a la derecha */
+}
+
+/* Estilos para la información del producto */
+.product-info,
+.product-description {
+  flex: 1; /* Permite que los elementos se ajusten al espacio disponible */
+}
+
+/* Estilos para el título del producto */
+.product-info h1 {
+  margin-top: 0; /* Elimina el margen superior */
+}
+
+/* Estilos para la descripción del producto */
+.product-description {
+  text-align: justify; /* Justifica el texto */
+}
+
+/* Define una clase para ocultar elementos */
+.escondido {
+  display: none; /* Oculta el elemento */
+}
+

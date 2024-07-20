@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tienda de videojuegos duxe" />
+  <meta name="keywords"
+    content="Tienda de videojuegos, tienda, videojuegos, juegos, consolas, Duxe, Nintendo, PlayStation, Xbox" />
+  <meta name="author" content="Francisco Daniel Palacio Hernández" />
+  <title>Página de Pago - Duxe</title>
+  <!-- Enlaces a archivos CSS y fuentes externas -->
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="icon" href="Imagenes/Logos/Duxe.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Scripts JavaScript -->
+  <script src="cartService.js" defer></script>
+  <script src="cart.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- Encabezado de la página -->
+    <div class="brand">
+      <!-- Marca y logo -->
+      <a href="#"><img src="Imagenes/Logos/Duxe.jpg" alt="Logo de la marca" /></a>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+      <!-- Lista de categorías -->
+      <ul>
+        <li><a href="#">PlayStation</a></li>
+        <li><a href="#">Xbox</a></li>
+        <li><a href="#">Nintendo</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Carrito de compras -->
+    <div class="container-cart-icon">
+      <!-- Enlace al carrito de compras -->
+      <a href="Carrito.html" style="text-decoration: none; color: aliceblue">
+        <!-- Ícono del carrito -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-cart"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+        </svg>
+        <!-- Contador de productos en el carrito -->
+        <span id="cuenta-carrito">0</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <!-- Sección para mostrar el mensaje si el carrito está vacío -->
+    <p id="carrito-vacio">
+      Ups! El carrito está vacío,
+      <a href="index.html">elige algunos productos</a>
+    </p>
+    <!-- Sección para mostrar los elementos del carrito -->
+    <section id="cart-container"></section>
+    <!-- Sección para mostrar el total de unidades y el precio total del carrito -->
+    <section id="totales">
+      <p>Total unidades: <span id="cantidad">0</span></p>
+      <p>Total precio: $<span id="precio">0</span></p>
+      <!-- Botones para comprar o vaciar el carrito -->
+      <button id="comprar">Comprar</button>
+      <button id="reiniciar">Vaciar</button>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <!-- Información de la marca -->
+      <h3>Duxe</h3>
+      <p class="footer-links">
+        <!-- Enlaces a diferentes secciones -->
+        <a href="#" class="link-1">Home</a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Politica de privacidad</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Contacto</a>
+      </p>
+      <p class="footer-company-name">Duxe © 2024</p>
+    </div>
+    <div class="footer-center">
+      <!-- Información de contacto -->
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>
+          <span>Instituto Tecnológico de Aguascalientes</span> 20255
+          Aguascalientes
+        </p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>4651520410</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">soporte@duxe.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <!-- Acerca de la marca -->
+      <p class="footer-company-about">
+        <span>Acerca de Duxe</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+        euismod convallis velit, eu auctor lacus vehicula sit amet.
+      </p>
+      <!-- Iconos de redes sociales -->
+      <div class="footer-icons">
+        <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/?lang-en"><i class="fab fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

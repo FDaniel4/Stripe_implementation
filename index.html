@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang es>
+
+<head>
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Francisco Daniel Palacio Hernández">
+  <meta name="keywords" content="Nintendo, Nintendo switch, Duxe">
+  <meta name="description" content="Producto Duxe nintendo switch">
+  <title>Producto - Nintendo Switch</title>
+
+  <!-- Estilos y favicon de la pagina -->
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="icon" href="Imagenes/Logos/Duxe.jpg" type="image/x-icon">
+
+  <!-- Librería de Font Awesome y script para el carrito de compras -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="cartService.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- Encabezado de la página -->
+    <div class="brand">
+      <!-- Marca y logo -->
+      <a href="#"><img src="Imagenes/Logos/Duxe.jpg" alt="Logo de la marca"></a>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+      <!-- Lista de categorías -->
+      <ul>
+        <li><a href="#">PlayStation</a></li>
+        <li><a href="#">Xbox</a></li>
+        <li><a href="#">Nintendo</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Carrito de compras -->
+    <div class="container-cart-icon">
+      <!-- Enlace al carrito de compras -->
+      <a href="Carrito.html" style="text-decoration: none; color: aliceblue;">
+        <!-- Ícono del carrito -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-cart"
+          viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+        </svg>
+        <!-- Contador de productos en el carrito -->
+        <span id="cuenta-carrito">0</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <!-- Sección de detalles del producto -->
+    <section class="product-details">
+      <!-- Contenedor de la imagen del producto -->
+      <div class="product-image">
+        <!-- La imagen del producto -->
+        <img src="Imagenes/Productos/Nintendo switch.png" alt="Nintendo Switch" style="width: 500px; height: auto;">
+      </div>
+      <div>
+        <!-- Información del producto -->
+        <div class="product-info">
+          <h1>Nintendo Switch</h1>
+          <p><strong>Precio:</strong> $340</p>
+          <!-- Botones para agregar al carrito y comprar-->
+          <button id="btn-add-to-cart" style="color: crimson; background-color: white;">Agregar al carrito</button>
+          <a href="https://buy.stripe.com/test_3cs29IgLk48y5mo7ss" style="text-decoration: none;"><button id="btn-compra"
+              style="color: crimson; background-color: white;">Comprar ahora</button></a>
+        </div>
+        <!-- Descripción del Producto -->
+        <div class="product-description">
+          <!-- Título de la descripción -->
+          <h2>Descripción del Producto</h2>
+          <!-- Detalles del producto -->
+          <p>El Nintendo Switch es una consola de videojuegos híbrida, que puede ser utilizada tanto en modo portátil
+            como en modo de sobremesa. Ofrece una amplia variedad de juegos, desde títulos exclusivos de Nintendo hasta
+            juegos de terceros, y destaca por su versatilidad y facilidad de uso.</p>
+          <!-- Lista de características -->
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>Versatilidad: Puede ser utilizado tanto en modo portátil como en modo de sobremesa.</li>
+            <li>Variedad de juegos: Ofrece una amplia selección de títulos exclusivos y de terceros.</li>
+            <li>Facilidad de uso: Diseñado para ser intuitivo y fácil de usar para jugadores de todas las edades.</li>
+            <li>Compatibilidad: Compatible con accesorios como los Joy-Cons y el Pro Controller.</li>
+            <li>Portabilidad: Su diseño compacto permite llevarlo fácilmente a cualquier lugar.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <!-- Información de la marca -->
+      <h3>Duxe</h3>
+      <p class="footer-links">
+        <!-- Enlaces a diferentes secciones -->
+        <a href="#" class="link-1">Home</a>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Politica de privacidad</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Contacto</a>
+      </p>
+      <p class="footer-company-name">Duxe © 2024</p>
+    </div>
+    <div class="footer-center">
+      <!-- Información de contacto -->
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>
+          <span>Instituto Tecnológico de Aguascalientes</span> 20255
+          Aguascalientes
+        </p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>4651520410</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">soporte@duxe.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <!-- Acerca de la marca -->
+      <p class="footer-company-about">
+        <span>Acerca de Duxe</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+        euismod convallis velit, eu auctor lacus vehicula sit amet.
+      </p>
+      <!-- Iconos de redes sociales -->
+      <div class="footer-icons">
+        <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/?lang-en"><i class="fab fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Evento de clic en el botón "Añadir al carrito"
+    document.getElementById("btn-add-to-cart").addEventListener("click", function () {
+      // Información del producto
+      const producto = {
+        id: 3,
+        nombre: "Nintendo switch",
+        precio: 6300,
+      };
+
+      // Llama a la función para agregar al carrito
+      agregarAlCarrito(producto);
+
+      // Redirecciona a la página del carrito o muestra un mensaje de confirmación
+      // Aquí puedes redireccionar al usuario a la página del carrito o mostrar un mensaje de confirmación
+      alert("Producto agregado al carrito.");
+    });
+  </script>
+</body>
+
+</html>
